@@ -1,0 +1,151 @@
+:root {
+    --main-color: #9a78ff;
+    --secondary-color: #6832e6;
+    --terciary-color: #9138ef;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--terciary-color), var(--secondary-color));
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    padding-bottom: 64px;
+    color: #ebebeb;
+    font-weight: 700;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #101010;
+    text-align: center;
+}
+
+.calc-container {
+    height: 480px;
+    width: 360px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 20px #10101055;
+    transition: 400ms;
+}
+
+.calc-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #10101055;
+}
+
+.nome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nome input {
+    text-align: center;
+    border: none;
+    /*border-radius: 10px; */
+    background-color: #ebebeb22;
+    color: #101010;
+    font-style: italic;
+    height: 60px;
+    width: 100%;
+    transition: 400ms;
+}
+
+.nome input:focus {
+    background-color: #ebebeb77;
+}
+
+.nome input:focus ~ .line{
+    width: 100%;
+}
+
+.info-container {
+    display: flex;
+    gap: 5px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instrucao {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #ebebeb;
+    text-shadow: 2px 2px 3px #101010;
+    margin-bottom: 5px;
+}
+
+.info input {
+    text-align: center;
+    border: none;
+    /*border-radius: 10px; */
+    background-color: #ebebeb22;
+    color: #101010;
+    font-style: italic;
+    height: 60px;
+    width: 100px;
+    transition: 400ms;
+}
+
+.info input:focus {
+    background-color: #ebebeb77;
+}
+
+.line {
+    height: 2px;
+    width: 5px;
+    display: block;
+    background-color: var(--secondary-color);
+    transition: 400ms;
+}
+
+.info input:focus ~ .line{
+    width: 100px;
+}
+
+#submit-button {
+    color: #101010;
+    background-color: #ebebeb77;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.2rem;
+    transition: 400ms;
+}
+
+#submit-button:hover {
+    background-color: #ebebeb;
+}
+
+.res-text {
+    background-color: var(--secondary-color);
+    width: 80%;
+    height: fit-content;
+    color: #ebebeb;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
